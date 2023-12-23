@@ -1,9 +1,14 @@
 import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
+import { Button, Col, Container, Row } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const TestGrid = () => {
   return (
-    <Container fluid className="mt-3">
+    <Container className="mt-3">
+      <Button as={Link} to={"/"} className="mb-2">
+        Menu awal
+      </Button>
+
       <Row lg={4} md={2} sm={1}>
         <Col className="py-2 bg-primary">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugiat
