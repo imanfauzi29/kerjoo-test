@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Welcome from "./pages/Welcome"
+import TestGrid from "./pages/TestGrid"
+import TestFlex from "./pages/TestFlex"
+import TestSelect from "./pages/TestSelect"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/test-grid" element={<TestGrid />} />
+        <Route path="/test-flex" element={<TestFlex />} />
+        <Route path="/test-select" element={<TestSelect />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
